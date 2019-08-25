@@ -36,19 +36,24 @@ public class Player : MonoBehaviour
         Vector2 currentPos = new Vector2(position.x, position.y);
         Vector2 newPos = currentPos + direction;
 
-        GameObject portal1 = GameObject.FindGameObjectsWithTag("Portal")[0];
-        GameObject portal2 = GameObject.FindGameObjectsWithTag("Portal")[1];
+        if (GameObject.FindGameObjectsWithTag("Portal")?.Length > 1)
+        {
 
-        // see if player will move through portal (if they can move at all, which is checked later)
-        if (portal1.transform.position.x == newPos.x && portal1.transform.position.y == newPos.y)
-        {
-            // set newPos to the other portal's position + direction
-            newPos = new Vector2(portal2.transform.position.x, portal2.transform.position.y) + direction;
-        } else if (portal2.transform.position.x == newPos.x && portal2.transform.position.y == newPos.y)
-        {
-            newPos = new Vector2(portal1.transform.position.x, portal1.transform.position.y) + direction;
+            GameObject portal1 = GameObject.FindGameObjectsWithTag("Portal")[0];
+            GameObject portal2 = GameObject.FindGameObjectsWithTag("Portal")[1];
+
+            // see if player will move through portal (if they can move at all, which is checked later)
+            if (portal1.transform.position.x == newPos.x && portal1.transform.position.y == newPos.y)
+            {
+                // set newPos to the other portal's position + direction
+                newPos = new Vector2(portal2.transform.position.x, portal2.transform.position.y) + direction;
+            }
+            else if (portal2.transform.position.x == newPos.x && portal2.transform.position.y == newPos.y)
+            {
+                newPos = new Vector2(portal1.transform.position.x, portal1.transform.position.y) + direction;
+            }
+
         }
-
 
         GameObject[] walls = GameObject.FindGameObjectsWithTag("Wall");
 
