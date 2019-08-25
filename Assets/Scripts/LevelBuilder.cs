@@ -44,6 +44,7 @@ public class LevelBuilder : MonoBehaviour
         int startx = -m_Level.Width / 2;
         int x = startx;
         int y = -m_Level.Height / 2;
+
         foreach (var row in m_Level.m_Rows)
         {
             foreach (var ch in row)
@@ -52,7 +53,7 @@ public class LevelBuilder : MonoBehaviour
                 GameObject prefab = GetPrefab(ch);
                 if (prefab)
                 {
-                    Debug.Log(prefab.name);
+                    Debug.Log(prefab);
                     Instantiate(prefab, new Vector3(x, y, 0), Quaternion.identity);
                 }
                 x++;
