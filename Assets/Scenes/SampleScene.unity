@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6461ed162cb274546804cf4e9d61262a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CurrentLevel: 0
+  m_CurrentLevel: 4
   m_LevelElements:
   - m_Character: '#'
     m_Prefab: {fileID: 1377535906498317550, guid: 6ca11e8f2a8da43a2890f16e9ba62276,
@@ -879,6 +879,9 @@ MonoBehaviour:
       type: 3}
   - m_Character: '@'
     m_Prefab: {fileID: 6224986067610354344, guid: 584eb1ca955ba47e7bc975e868ece6c9,
+      type: 3}
+  - m_Character: '*'
+    m_Prefab: {fileID: 482951266238688479, guid: aae3658ec327648d1b4a6e748c3cef13,
       type: 3}
 --- !u!114 &1959765971
 MonoBehaviour:

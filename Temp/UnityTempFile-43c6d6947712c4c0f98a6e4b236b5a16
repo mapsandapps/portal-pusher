@@ -301,3 +301,4 @@
 "Assets/Scripts/LevelBuilder.cs"
 "Assets/Scripts/Levels.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/SFXPlaying.cs"
