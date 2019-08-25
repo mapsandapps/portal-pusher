@@ -43,7 +43,7 @@ public class LevelBuilder : MonoBehaviour
         // offset coordinates so that center of level is roughly at 0,0
         int startx = -m_Level.Width / 2;
         int x = startx;
-        int y = -m_Level.Height / 2;
+        int y = m_Level.Height / 2;
 
         foreach (var row in m_Level.m_Rows)
         {
@@ -58,7 +58,7 @@ public class LevelBuilder : MonoBehaviour
                 }
                 x++;
             }
-            y++;
+            y--;
             x = startx;
         }
     }
